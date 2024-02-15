@@ -14,9 +14,9 @@ namespace HomeWork.DataAccess.Concrete
         List<Instructor> instructors;
         public InstructorDal()
         {
-            Instructor instructor1 = new Instructor() { Id = 1, FirstName = "Engin", LastName = "DEMİROĞ", Courses = new List<Course>().Where(c => c.Author == "Engin DEMİROĞ").ToList() };
-            Instructor instructor2 = new Instructor() { Id = 2, FirstName = "Halit", LastName = "KALAYCI", Courses = new List<Course>().Where(c => c.Author == "Halit Enes KALAYCI").ToList() };
-            instructors = new List<Instructor>() { instructor1,instructor2};
+            Instructor instructor1 = new Instructor() { Id = 1, FirstName = "Engin", LastName = "DEMİROĞ", Courses = new List<Course>().Where(c => c.Name == "Engin").ToList() };
+            Instructor instructor2 = new Instructor() { Id = 2, FirstName = "Halit", LastName = "KALAYCI", Courses = new List<Course>().Where(c => c.Name == "Halit ").ToList() };
+            instructors = new List<Instructor>() { instructor1, instructor2 };
         }
 
         public void Add(Instructor instructor)
